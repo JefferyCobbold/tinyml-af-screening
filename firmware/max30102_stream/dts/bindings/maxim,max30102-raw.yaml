@@ -1,0 +1,14 @@
+# Devicetree binding: describes which properties a "maxim,max30102" node
+# may have. Zephyr checks the overlay against this at build time.
+
+description: MAX30102 pulse oximeter, raw FIFO access (application driver, not the upstream Zephyr sensor driver)
+
+compatible: "maxim,max30102-raw"
+
+include: i2c-device.yaml
+
+properties:
+  int-gpios:
+    type: phandle-array
+    required: true
+    description: Interrupt pin (open-drain, active low)

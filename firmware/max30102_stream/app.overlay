@@ -1,0 +1,23 @@
+/*
+ * Devicetree overlay: tells Zephyr where the MAX30102 is connected.
+ * The driver reads these values at build time, so no pin numbers are
+ * hard-coded in C.
+ *
+ * Wiring (Arduino Nano 33 BLE Sense):
+ *   MAX30102 VIN -> 3.3V     MAX30102 GND -> GND
+ *   MAX30102 SDA -> A4       MAX30102 SCL -> A5   (I2C0)
+ *   MAX30102 INT -> D2
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/i2c/i2c.h>
+
+&arduino_i2c {
+	clock-frequency = <I2C_BITRATE_FAST>;   /* 400 kHz */
+
+	max30102: max30102@57 {
+		compatible = "maxim,max30102-raw";   /* our own driver, not Zephyr's */
+		reg = <0x57>;                        /* fixed I2C address of the chip */
+		/* INT is open-drain and pulls low when samples are ready */
+		int-gpios = <&arduino_nano_header 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+};
