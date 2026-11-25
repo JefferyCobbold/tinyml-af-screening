@@ -4,6 +4,9 @@ On-device atrial fibrillation (AF) screening from photoplethysmography (PPG). A 
 
 Every 30 seconds of pulse, the device reports **normal**, **possible AF** or **unreliable signal**, with heart rate and signal quality.
 
+![Live AF screening on the Nano 33 BLE Sense](images/af-screening-demo.gif)
+*Live screening: finger on the MAX30102, result printed over serial. [Full video ↓](#live-screening-video)*
+
 ![Live MAX30102 recording processed by the pipeline](images/f3_live_recording.png)
 *A live recording from the MAX30102: raw pulse (top) and one 30 s window after processing, with every beat detected (bottom, 29 beats, SQI 0.994).*
 
@@ -201,6 +204,10 @@ The features fall in the same range as the normal-rhythm patients in the clinica
 
 **Live screening on the board** (finger placed and lifted between windows, so each session gave one window):
 
+<a id="live-screening-video"></a>
+
+https://github.com/user-attachments/assets/REPLACE-WITH-YOUR-VIDEO-LINK
+
 | Session | Result | HR (bpm) | SQI | p(AF) | Processing time |
 |---|---|---|---|---|---|
 | 1 | normal | 85 | 0.90 | 0.02 | 12.1 ms |
@@ -256,7 +263,7 @@ firmware/max30102_stream/     MAX30102 driver, raw streaming over USB
   tools/live_view.py          live pulse view for finger placement
 firmware/af_pipeline/         stage 3: full pipeline against golden raw-signal data
 firmware/af_live/             live AF screening
-images/                       figures used in this README
+images/                       figures and demo GIF used in this README
 ```
 
 ## Building
