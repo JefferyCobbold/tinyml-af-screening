@@ -206,7 +206,9 @@ The features fall in the same range as the normal-rhythm patients in the clinica
 
 <a id="live-screening-video"></a>
 
-▶️ **[Watch the full live demo video (54 s)](images/af-screening-demo.mp4)**
+https://github.com/user-attachments/assets/7e369540-2aac-46c6-a0cf-9a87daf51f97
+
+ **[Watch the full live demo video (54 s)](images/af-screening-demo.mp4)**
 
 | Session | Result | HR (bpm) | SQI | p(AF) | Processing time |
 |---|---|---|---|---|---|
