@@ -205,9 +205,7 @@ The features fall in the same range as the normal-rhythm patients in the clinica
 **Live screening on the board** (finger placed and lifted between windows, so each session gave one window):
 
 <a id="live-screening-video"></a>
-
-https://github.com/user-attachments/assets/REPLACE-WITH-YOUR-VIDEO-LINK
-
+https://github.com/JefferyCobbold/tinyml-af-screening/blob/main/images/af-screening-demo.mp4
 | Session | Result | HR (bpm) | SQI | p(AF) | Processing time |
 |---|---|---|---|---|---|
 | 1 | normal | 85 | 0.90 | 0.02 | 12.1 ms |
